@@ -1,0 +1,18 @@
+QWidget { background: #efefef; color: #111111; }
+QDialog { background: #efefef; color: #111111; }
+
+QToolBar { spacing: 4px; padding: 2px; border: 0px; background: #efefef; }
+QToolBar QToolButton { padding: 2px 8px; }
+
+QMenuBar { background: #e8e8e8; }
+QStatusBar { background: #e8e8e8; }
+
+QTableWidget { background: white; gridline-color: #d0d0d0; selection-background-color: #cfe6ff; }
+QHeaderView { background: #e6e6e6; }
+QHeaderView::section { background: #e6e6e6; padding: 3px; border: 1px solid #d0d0d0; font-weight: 600; }
+QTableCornerButton::section { background: #e6e6e6; border: 1px solid #d0d0d0; }
+
+QPlainTextEdit, QTextEdit { background: #ffffff; border: 1px solid #cfcfcf; }
+
+QSplitter::handle { background: #dcdcdc; }
+QSplitter::handle:disabled { background: #dcdcdc; }

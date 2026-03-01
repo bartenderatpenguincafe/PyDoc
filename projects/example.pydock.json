@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "name": "Example",
+  "serial": {
+    "port": "COM3",
+    "baud": 115200
+  },
+  "send_sequences": [
+    {
+      "id": "s1",
+      "name": "Ping",
+      "repr": "hex",
+      "data": "FF AC 01",
+      "checksum": {
+        "enabled": false,
+        "type": "none",
+        "at": "append_le"
+      }
+    },
+    {
+      "id": "s2",
+      "name": "Read (CRC16 Modbus)",
+      "repr": "hex",
+      "data": "01 03 00 00 00 01",
+      "checksum": {
+        "enabled": true,
+        "type": "crc16_modbus",
+        "at": "append_le"
+      }
+    }
+  ],
+  "receive_sequences": [
+    {
+      "id": "r1",
+      "active": true,
+      "name": "OK step",
+      "repr": "hex",
+      "pattern": "FF 52 ??",
+      "action": {
+        "type": "log",
+        "text": "OK frame=%HEX%",
+        "send_id": ""
+      }
+    },
+    {
+      "id": "r2",
+      "active": true,
+      "name": "Auto-answer demo",
+      "repr": "hex",
+      "pattern": "AA BB ??",
+      "action": {
+        "type": "send",
+        "text": "",
+        "send_id": "s1"
+      }
+    }
+  ],
+  "documentation": "Example project for PyDock.\n",
+  "ui_timestamps": true
+}

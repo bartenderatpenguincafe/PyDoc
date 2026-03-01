@@ -1,0 +1,39 @@
+/* Base */
+QWidget { background: #1f1f1f; color: #d7d7d7; }
+QDialog { background: #1f1f1f; color: #d7d7d7; }
+
+/* Toolbar */
+QToolBar { spacing: 4px; padding: 2px; border: 0px; background: #2a2a2a; }
+QToolBar QToolButton { color: #d7d7d7; background: transparent; border: 0px; padding: 2px 8px; }
+QToolBar QToolButton:disabled { color: #7a7a7a; }
+
+/* Menubar (we hide it, but keep safe) */
+QMenuBar { background: #2a2a2a; }
+QMenuBar::item { color: #d7d7d7; background: transparent; padding: 4px 8px; }
+QMenuBar::item:selected, QMenuBar::item:pressed { background: #3a3a3a; }
+
+/* Menus */
+QMenu { background: #2a2a2a; color: #d7d7d7; border: 1px solid #3a3a3a; }
+QMenu::item { padding: 4px 18px 4px 18px; }
+QMenu::item:selected { background: #2f4f6f; }
+QMenu::item:disabled { color: #7a7a7a; }
+
+/* Inputs + dropdown lists */
+QLineEdit, QComboBox, QSpinBox, QFontComboBox { background: #1b1b1b; color: #d7d7d7; border: 1px solid #3a3a3a; }
+QComboBox QAbstractItemView { background: #1b1b1b; color: #d7d7d7; selection-background-color: #2f4f6f; }
+
+/* Status */
+QStatusBar { background: #2a2a2a; color: #d7d7d7; }
+
+/* Tables */
+QTableWidget { background: #232323; color: #d7d7d7; gridline-color: #3a3a3a; selection-background-color: #2f4f6f; }
+QHeaderView { background: #2e2e2e; }
+QHeaderView::section { background: #2e2e2e; padding: 3px; border: 1px solid #3a3a3a; font-weight: 600; color: #d7d7d7; }
+QTableCornerButton::section { background: #2e2e2e; border: 1px solid #3a3a3a; }  /* fixes white corner squares */
+
+/* Editors */
+QPlainTextEdit, QTextEdit { background: #1b1b1b; color: #d7d7d7; border: 1px solid #3a3a3a; }
+
+/* Splitters */
+QSplitter::handle { background: #3a3a3a; }
+QSplitter::handle:disabled { background: #3a3a3a; }

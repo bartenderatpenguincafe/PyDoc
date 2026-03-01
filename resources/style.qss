@@ -1,0 +1,19 @@
+QMainWindow { background: #efefef; }
+QToolBar { spacing: 6px; padding: 3px; border: 0px; }
+QMenuBar { background: #e8e8e8; }
+QStatusBar { background: #e8e8e8; }
+QTableWidget { background: white; gridline-color: #d0d0d0; selection-background-color: #cfe6ff; }
+QHeaderView::section {
+  background: #e6e6e6;
+  padding: 4px;
+  border: 1px solid #d0d0d0;
+  font-weight: 600;
+}
+QPlainTextEdit {
+  background: #ffffff;
+  border: 1px solid #cfcfcf;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 10pt;
+}
+QToolButton { padding: 2px 6px; }
+QSplitter::handle { background: #dcdcdc; }
