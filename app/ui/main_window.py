@@ -29,6 +29,9 @@ class MainWindow(QMainWindow):
 
     def __init__(self) -> None:
         super().__init__()
+        # стартовый размер окна (чтобы не было "маленького" запуска)
+        self.resize(1280, 860)
+        self.setMinimumSize(1000, 700)
         self._project_path: Path | None = None
         self._app_settings: AppSettings = load_settings()
         self._lang = normalize_lang(getattr(self._app_settings, "language", "ru"))
@@ -38,6 +41,13 @@ class MainWindow(QMainWindow):
         self.engine.log_line.connect(self._log_colored)
 
         self._build_ui()
+        # гарантируем крупные пропорции при первом показе
+        try:
+            self.main_split.setSizes([self.LEFT_WIDTH_PX, 900])
+            self.left_split.setSizes([420, 420])
+            self.right_split.setSizes([620, 240])
+        except Exception:
+            pass
         self._build_toolbar()
         self._build_statusbar()
 
